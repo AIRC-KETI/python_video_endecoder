@@ -173,13 +173,15 @@ struct VideoCodec {
     ~VideoCodec(){
         avcodec_close(mCodecContext);
         av_free(mCodecContext);
+
+        av_freep(&frame->data[0]);
+
         #if LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(55,28,1)
             av_frame_free(&frame);
+            printf("av_frame_free(&frame);\n");
         #else
             avcodec_free_frame(&frame);
         #endif
-
-        av_freep(&frame->data[0]);
 
         free(rgb[0]);
     }
