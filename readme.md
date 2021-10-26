@@ -14,8 +14,15 @@ python3 setup.py install
 
 ### from Advenced Package Tool
 
+#### On Ubuntu (Debian)
+
 ```bash
-sudo apt-get install -y libavutil-dev libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install -y libavutil-dev libavcodec-dev libavformat-dev libswscale-dev pkg-config
+```
+
+#### On Max OS X
+```bash
+brew install ffmpeg pkg-config
 ```
 
 ### from source
