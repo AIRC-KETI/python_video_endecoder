@@ -15,7 +15,7 @@ python3 setup.py install
 ### On Ubuntu (Debian)
 
 ```bash
-sudo apt-get install -y libavutil-dev libavcodec-dev libavformat-dev libswscale-dev pkg-config
+sudo apt-get install -y pkg-config libavutil-dev libavcodec-dev libavformat-dev libswscale-dev
 ```
 
 ### On Max OS X
