@@ -66,7 +66,7 @@ struct VideoCodec {
         mCodecContext->codec_type = AVMEDIA_TYPE_VIDEO;
         mCodecContext->thread_count = 0;
 
-        mCodecContext->flags |= CODEC_FLAG_LOW_DELAY;
+        mCodecContext->flags |= AV_CODEC_FLAG_LOW_DELAY;
 
         avcodec_open2(mCodecContext, mCodec, NULL);
 
